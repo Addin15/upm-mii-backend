@@ -7,7 +7,7 @@ use App\Models\UserProfile;
 
 class AuthController extends Controller
 {
-    public function get() {
-        return UserProfile::get();
+    public function getUsers() {
+        return UserProfile::all();
     }
 }
