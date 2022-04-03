@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\UserProfile;
 
 class AuthController extends Controller
 {
     public function get() {
-        dd(User::all());
+        return dd(UserProfile::all());
     }
 }
