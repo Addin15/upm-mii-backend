@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\InsurancePlanController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,6 @@ Route::get('/insurances', [InsurancePlanController::class, 'getInsurancePlans'])
 
 //Get companies list
 Route::get('/companies', [CompanyController::class, 'getCompanies']);
+
+//Get user profile
+Route::get('/{userId}/profiles', [UserController::class, 'getProfile']);
