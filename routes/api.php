@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\InsurancePlanController;
+use App\Http\Controllers\CompanyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +22,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/test', [AuthController::class, 'getUsers']);
+//Get insurance plans
 Route::get('/insurances', [InsurancePlanController::class, 'getInsurancePlans']);
+
+//Get companies list
+Route::get('/companies', [CompanyController::class, 'getCompanies']);
