@@ -17,8 +17,13 @@ return new class extends Migration
             $table->id();
             $table->integer('user_id');
             $table->string('name');
-            $table->string('url');
+            $table->string('nric');
+            $table->string('gender');
+            $table->string('birth_date');
             $table->integer('age');
+            $table->string('phone');
+            $table->string('state');
+            $table->text('address');
             $table->timestamps();
         });
     }

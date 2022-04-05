@@ -7,6 +7,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\InsurancePlanController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\FAQsController;
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,4 +32,10 @@ Route::get('/insurances', [InsurancePlanController::class, 'getInsurancePlans'])
 Route::get('/companies', [CompanyController::class, 'getCompanies']);
 
 //Get user profile
-Route::get('/{userId}/profiles', [UserController::class, 'getProfile']);
+Route::get('/{userId}', [UserController::class, 'getProfile']);
+
+//Get faqs
+Route::get('/faqs', [FAQsController::class, 'getFAQs']);
+
+//Get news
+Route::get('/news', [News::class, 'getNews']);
