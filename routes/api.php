@@ -28,6 +28,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //Login
 Route::post('/login',[AuthController::class, 'index']);
 
+//Login
+Route::post('/register',[AuthController::class, 'register']);
+
 //Get insurance plans
 Route::get('/insurances', [InsurancePlanController::class, 'getInsurancePlans']);
 
