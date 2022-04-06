@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('insurance_plans', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('type');
-            $table->integer('company');
-            $table->string('description');
-            $table->integer('rate');
+            $table->string('i_name');
+            $table->string('i_type');
+            $table->integer('i_company');
+            $table->string('i_description');
+            $table->integer('i_rate');
             $table->timestamps();
         });
     }
