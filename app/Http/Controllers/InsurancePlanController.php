@@ -19,7 +19,11 @@ class InsurancePlanController extends Controller
 
     public function getCompanyInsurances(InsurancePlan $insurancePlans) {
         $companyID = request('companyID');
-        $insurancePlans = InsurancePlan::where('i_company', $companyID)->get();
+        $insurancePlans = DB::table('insurance_plans')
+            ->leftjoin('companies', 'insurance_plans.i_company', '=', 'companies.c_id')
+            ->select('insurance_plans.*', 'companies.*')
+            ->where('i_company', $companyID)
+            ->get();
         return $insurancePlans;
     }
 }
