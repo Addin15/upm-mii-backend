@@ -31,6 +31,12 @@ Route::get('/insurances', [InsurancePlanController::class, 'getInsurancePlans'])
 //Get companies list
 Route::get('/companies', [CompanyController::class, 'getCompanies']);
 
+//Get company insurance plans
+Route::get('/company/{companyID}/insurances', [InsurancePlanController::class, 'getCompanyInsurances']);
+
+//Get company insurance plans
+Route::get('/company/{companyID}/faqs', [FAQsController::class, 'getCompanyFaqs']);
+
 //Get user profile
 Route::get('/{userId}', [UserController::class, 'getProfile']);
 

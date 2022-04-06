@@ -16,4 +16,10 @@ class InsurancePlanController extends Controller
 
         return $insurancePlans;
     }
+
+    public function getCompanyInsurances(InsurancePlan $insurancePlans) {
+        $companyID = request('companyID');
+        $insurancePlans = InsurancePlan::where('i_company', $companyID)->get();
+        return $insurancePlans;
+    }
 }
