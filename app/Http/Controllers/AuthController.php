@@ -39,6 +39,6 @@ class AuthController extends Controller
             'password' => Hash::make(request('password'))
         ]);
 
-        return $res;
+        return response($res, 201);
     }
 }
