@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('insurance_plans', function (Blueprint $table) {
-            $table->id();
+            $table->id('i_id');
             $table->string('i_name');
             $table->string('i_type');
             $table->integer('i_company');

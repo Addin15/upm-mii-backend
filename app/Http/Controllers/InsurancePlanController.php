@@ -10,7 +10,7 @@ class InsurancePlanController extends Controller
 {
     public function getInsurancePlans(InsurancePlan $insurancePlans) {
         $insurancePlans = DB::table('insurance_plans')
-            ->leftjoin('companies', 'companies.id', '=', 'insurance_plans.i_company')
+            ->leftjoin('companies', 'insurance_plans.i_company', '=', 'companies.c_id')
             ->select('insurance_plans.*', 'companies.*')
             ->get();
 
