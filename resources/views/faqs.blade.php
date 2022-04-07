@@ -415,13 +415,13 @@
         <div class="col pt-4 align-text-middle">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="/">Insurance Plans</a>
+                    <a class="nav-link text-white" aria-current="page" href="/">Insurance Plans</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="/faqs">FAQs</a>
+                    <a class="nav-link active text-white" href="/faqs">FAQs</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#">Logout</a>

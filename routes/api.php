@@ -50,4 +50,4 @@ Route::get('/{userId}', [UserController::class, 'getProfile']);
 Route::get('/faqs', [FAQsController::class, 'getFAQs']);
 
 //Get news
-Route::get('/news', [News::class, 'getNews']);
+Route::get('/news', [NewsController::class, 'getNews']);
