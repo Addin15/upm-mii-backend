@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\UserProfile;
 use App\Models\InsurancePlan;
+use App\Models\UsersPlan;
 use Illuminate\Support\Facades\DB;
 
 class UsersPlanController extends Controller
