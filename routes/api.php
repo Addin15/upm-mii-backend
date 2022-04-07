@@ -47,7 +47,7 @@ Route::get('/company/{companyID}/faqs', [FAQsController::class, 'getCompanyFaqs'
 
 //Get user profile
 Route::get('/profile/{userId}/profile', [UserController::class, 'getProfile']);
-Route::post('/profile/create', [UserController::class, 'create']);
+Route::post('/profile/{userId}/create', [UserController::class, 'create']);
 Route::post('/profile/{userId}/update', [UserController::class, 'update']);
 
 //Get user profile
