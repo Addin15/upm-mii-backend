@@ -9,6 +9,7 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\FAQsController;
 use App\Http\Controllers\SKController;
+use App\Http\Controllers\UsersPlanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,10 +54,14 @@ Route::post('/profile/{userId}/update', [UserController::class, 'update']);
 //Get user profile
 Route::post('/{userId}/profile', [UserController::class, 'getProfile']);
 
+//Get news
 Route::get('/sks', [SKController::class, 'getSK']);
 
+//Get faqs
 Route::get('/faqs', [FAQsController::class, 'getFAQs']);
 
+//Get userplan
+Route::get('/userplan/{userId}/get', [UsersPlanController::class, 'get']);
+Route::get('/userplan/{userId}/{planId}/create', [UsersPlanController::class, 'create']);
 
 
-//Get faqs
