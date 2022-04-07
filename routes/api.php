@@ -52,7 +52,7 @@ Route::post('/profile/{userId}/create', [UserController::class, 'create']);
 Route::post('/profile/{userId}/update', [UserController::class, 'update']);
 
 //Get user profile
-Route::post('/{userId}/profile', [UserController::class, 'getProfile']);
+Route::get('/{userId}/profile', [UserController::class, 'getProfile']);
 
 //Get news
 Route::get('/sks', [SKController::class, 'getSK']);
@@ -62,6 +62,6 @@ Route::get('/faqs', [FAQsController::class, 'getFAQs']);
 
 //Get userplan
 Route::get('/userplan/{userId}/get', [UsersPlanController::class, 'get']);
-Route::get('/userplan/{userId}/{planId}/create', [UsersPlanController::class, 'create']);
+Route::post('/userplan/{userId}/{planId}/create', [UsersPlanController::class, 'create']);
 
 
