@@ -20,6 +20,14 @@ return new class extends Migration
             $table->integer('i_company');
             $table->string('i_description');
             $table->integer('i_rate');
+            $table->string('i_increasing_sum');
+            $table->string('i_min_sum');
+            $table->string('i_entry_age');
+            $table->integer('i_max_coverage');
+            $table->string('i_no_lapse_benefit');
+            $table->string('i_cover_term');
+            $table->string('i_premium_type');
+            $table->string('i_income_tax_relief');
             $table->timestamps();
         });
     }

@@ -17,8 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('user_id');
             $table->integer('plan_id');
-            $table->boolean('1');
-            $table->double('pay_per_month');
+            $table->boolean('accepted');
             $table->timestamps();
         });
     }
