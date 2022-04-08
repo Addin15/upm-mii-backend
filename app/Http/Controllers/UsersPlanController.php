@@ -30,7 +30,7 @@ class UsersPlanController extends Controller
         $plan = UsersPlan::create([
             'user_id' => request('userId'),
             'plan_id' => request('planId'),  
-            'accepted' => request('accepted'),
+            'accepted' => 1,
         ]);
 
         return $plan;

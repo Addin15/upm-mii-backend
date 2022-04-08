@@ -17,5 +17,6 @@ class UsersPlan extends Model
     protected $fillable = [
         'user_id',
         'plan_id',
+        'accepted',
     ];
 }

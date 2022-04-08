@@ -62,6 +62,6 @@ Route::get('/faqs', [FAQsController::class, 'getFAQs']);
 
 //Get userplan
 Route::get('/userplan/{userId}/get', [UsersPlanController::class, 'get']);
-Route::post('/userplan/{userId}/{planId}/{accepted}/create', [UsersPlanController::class, 'create']);
+Route::get('/userplan/{userId}/{planId}/create', [UsersPlanController::class, 'create']);
 
 
