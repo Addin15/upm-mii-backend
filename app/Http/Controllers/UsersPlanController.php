@@ -13,8 +13,9 @@ class UsersPlanController extends Controller
     public function get(InsurancePlan $plan) {
         $userid = request('userId');
         $plan = DB::table('users_plans')
-        ->leftjoin('insurance_plans', 'insurance_plans.i_id', '=', 'users_plans.plan_id')
-        ->select('insurance_plans.*', 'users_plans.*')
+        ->join('insurance_plans', 'insurance_plans.i_id', '=', 'users_plans.plan_id')
+        ->join('companies', 'companies.c_id', '=', 'insurance_plans.i_company')
+        ->select('insurance_plans.*', 'users_plans.*', 'companies.*')
         ->where([
             ['user_id', '=', $userid],
             ['accepted', '=', 1],
