@@ -15,7 +15,10 @@ class UsersPlanController extends Controller
         $plan = DB::table('users_plans')
         ->leftjoin('insurance_plans', 'insurance_plans.i_id', '=', 'users_plans.plan_id')
         ->select('insurance_plans.*', 'users_plans.*')
-        ->where('user_id', $userid)
+        ->where([
+            ['user_id', '=', $userid],
+            ['accepted', '=', 1],
+        ])
         ->get();
 
         return $plan;
