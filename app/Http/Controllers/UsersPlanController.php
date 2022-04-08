@@ -30,7 +30,7 @@ class UsersPlanController extends Controller
         $plan = UsersPlan::create([
             'user_id' => request('userId'),
             'plan_id' => request('planId'),  
-            'accepted' => '1',
+            'accepted' => request('accepted'),
         ]);
 
         return $plan;
@@ -40,8 +40,7 @@ class UsersPlanController extends Controller
         $userid = request('userId');
         $planid = request('planId');
         $plan = UsersPlan::where()->update([
-            'accepted' => request('accepted'),
-            'pay_per_month' => request('pay_per_month'),  
+            'accepted' => request('accepted'), 
         ]);
 
         return $plan;
